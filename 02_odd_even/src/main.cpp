@@ -58,14 +58,14 @@ int main(int argc, char *argv[])
 		printf("No\n");
 	}
 	//number = argv[1]; // No
-	//should use atoi?
-	// or std::stoi?
+	//should use atoi? c
+	// or std::stoi? c++
 
 	//std::cout << argumentAsString << std::endl; // i think this should be removed
 
 	// --------------- stop
 
-	//printOddOrEven(number);
+//printOddOrEven(number);
 
 	return 0;
 }
