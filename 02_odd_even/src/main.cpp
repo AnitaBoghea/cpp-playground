@@ -55,7 +55,7 @@ int main(int argc, char *argv[])
 		printOddOrEven(number);
 	}
 	catch (...) {
-		printf("No\n");
+		printf("No \n");
 	}
 	//number = argv[1]; // No
 	//should use atoi? c
