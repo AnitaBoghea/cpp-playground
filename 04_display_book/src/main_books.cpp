@@ -34,7 +34,10 @@ struct Book
 	void addAuthor(Author author)
 	{
 		// TODO: add an author to the container authors array.
+		authors[numAuthors] = author;
 		numAuthors++;
+			
+		
 	}
 
 	void print()
@@ -44,6 +47,9 @@ struct Book
 		std::cout << this->title << std::endl;
 
 		// TODO: add all authors
+		std::cout << "Author : ";
+		std::cout << authors->name<< std::endl;
+		
 
 	}
 };
@@ -63,7 +69,7 @@ int main()
 	// Load the data into books
 	book1.id = 1;
 	book1.numAuthors = 0;
-	setBookName(book1, u8"The origin of truth (nu există, nu o căutați)");
+	setBookName(book1, u8"The origin of truth (nu există, nu o cautati)");
 	author.setName("Gusti");
 	book1.addAuthor(author);
 

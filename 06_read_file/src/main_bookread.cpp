@@ -1,6 +1,8 @@
 ﻿#include <iostream>
 #include <string>
 #include <vector>
+#include<fstream>
+#include <sstream>
 
 /**
 	Define a simple book.
@@ -34,34 +36,57 @@ public:
 std::vector<Book> readBooksFromTextFile(const std::string& file_name)
 {
 	std::vector<Book> results;
-	// TODO: BEGIN read the file -------------------------------------
 
+	std::ifstream file(file_name);
 
-	// E.g. Book myBook;
-	//		...
-	//		results.emplace_back(myBook);
+	if (file.is_open()) {
+		std::string line;
+		while (std::getline(file, line)) {
+			Book myBook;
+			myBook.name = line;
+			std::cout << myBook.name << std::endl;
+			getline(file, line);
+			myBook.authors = line;
+			std::cout << myBook.authors << std::endl;
+			results.push_back(myBook);
 
-	// TODO: END read file and add to results vector ------------------
-	return results;
-}
+		}
+		file.close();
+		std::cout<<std::endl;
 
-int main()
-{
-	// Read a collection of books from a file.
-	// Simple examples can be found everywhere.
-	// E.g. https://stackoverflow.com/questions/7868936/read-file-line-by-line-using-ifstream-in-c
+		// TODO: BEGIN read the file -------------------------------------
 
-	// Read the data
-	std::string input_data("../../data/ermahgerd_berks.txt");
-	std::cout << "Reading the data from " << input_data << std::endl;
-	std::vector<Book> books_from_file = readBooksFromTextFile(input_data);
+		 // E.g. Book myBook;
+		 //		...
+		 //		results.emplace_back(myBook);
 
-	// Print the data
-	std::cout << "Here are all the books found in the data file..." << std::endl;
-	for (auto book : books_from_file)
-	{
-		book.print();
+		 // TODO: END read file and add to results vector ------------------
+		return results;
 	}
-
-	return 0;
 }
+
+	int main()
+	{
+		// Read a collection of books from a file.
+		// Simple examples can be found everywhere.
+		// E.g. https://stackoverflow.com/questions/7868936/read-file-line-by-line-using-ifstream-in-c
+
+
+
+
+
+
+		// Read the data
+		std::string input_data("ermahgerd_berks.txt");
+		std::cout << "Reading the data from " << input_data << std::endl;
+		std::vector<Book> books_from_file = readBooksFromTextFile(input_data);
+		
+		// Print the data
+		std::cout << "Here are all the books found in the data file..." << std::endl;
+		for (auto book : books_from_file)
+		{
+			book.print();
+		}
+
+		return 0;
+	}
