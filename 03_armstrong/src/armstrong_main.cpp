@@ -67,7 +67,7 @@ int main(int argc, char* argv[])
 	// Get the first argument
 	//std::string argumentAsString = argv[1];
 	
-	// TODO: read number / cast to integer
+	// TODO: read number
 	std::cout << "Enter number";
 	std::cin >> readNumber;
 
