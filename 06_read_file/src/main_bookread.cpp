@@ -58,7 +58,7 @@ std::vector<Book> readBooksFromTextFile(const std::string& file_name)
 
 		 // E.g. Book myBook;
 		 //		...
-		 //		results.emplace_back(myBook);
+		 //		results.emplace_back(myBook);----push_back
 
 		 // TODO: END read file and add to results vector ------------------
 		return results;

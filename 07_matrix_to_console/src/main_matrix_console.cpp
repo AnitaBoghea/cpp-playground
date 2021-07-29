@@ -18,7 +18,7 @@ private:
 
 public:
 	Matrix(size_t numColumnsX, size_t numLinesY)
-		// TODO: add functionality
+		// TODO: add functionality--constructor
 	{
 		column_count = numColumnsX;
 		line_count = numLinesY;

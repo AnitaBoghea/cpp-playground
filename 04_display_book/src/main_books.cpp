@@ -47,7 +47,7 @@ struct Book
 		std::cout << this->title << std::endl;
 
 		// TODO: add all authors
-		std::cout << "Author : "<<" ";
+		std::cout << "Author : ";
 		std::cout << authors->name<< std::endl;
 		
 
